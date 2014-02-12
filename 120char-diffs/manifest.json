@@ -1,0 +1,17 @@
+{
+  "name": "Better Github: 120 char diff width",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "makes diffs 120 characters wide",
+  "permissions": [
+    "tabs", "http://www.github.com/*"
+    ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.github.com/*"],
+      "run_at": "document_end",
+      "js": ["jquery.js", "120char.js"],
+      "css": ["120char.css"]
+    }
+  ]
+}
